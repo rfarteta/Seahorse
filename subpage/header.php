@@ -58,9 +58,6 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 //Links for logged in user
 if(isUserLoggedIn()) {
    echo "
-   <a class='mdl-navigation__link' href='formBuilder.php' style='color:gray'>Form Builder</a>
-   <a class='mdl-navigation__link' href='orderCreate.php' style='color:gray'>Order Now</a>
-   <a class='mdl-navigation__link' href='orderList.php' style='color:gray'>Order list</a>  
    <a class='mdl-navigation__link' href='user_settings.php' style='color:gray'>User Settings</a>   
    <a class='mdl-navigation__link' href='logout.php' style='color:gray'>Logout</a>
    ";
@@ -68,8 +65,6 @@ if(isUserLoggedIn()) {
    //Links for permission level 2 (default admin)
    if ($loggedInUser->checkPermission(array(2))){
    echo "
-   <a class='mdl-navigation__link' href='supplierAdd.php' style='color:gray'>Add Supplier</a>
-   <a class='mdl-navigation__link' href='productCreate.php' style='color:gray'>Create Product</a>
    <a class='mdl-navigation__link' href='admin_configuration.php' style='color:gray'>Admin Configuration</a>
    <a class='mdl-navigation__link' href='admin_users.php' style='color:gray'>Admin Users</a>
    <a class='mdl-navigation__link' href='admin_permissions.php' style='color:gray'>Admin Permissions</a>
