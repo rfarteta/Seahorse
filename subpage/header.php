@@ -65,6 +65,7 @@ if(isUserLoggedIn()) {
    //Links for permission level 2 (default admin)
    if ($loggedInUser->checkPermission(array(2))){
    echo "
+    <a class='mdl-navigation__link' href='createForm.php' style='color:gray'>Create Form</a>
    <a class='mdl-navigation__link' href='admin_configuration.php' style='color:gray'>Admin Configuration</a>
    <a class='mdl-navigation__link' href='admin_users.php' style='color:gray'>Admin Users</a>
    <a class='mdl-navigation__link' href='admin_permissions.php' style='color:gray'>Admin Permissions</a>
